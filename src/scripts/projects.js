@@ -52,18 +52,3 @@ let viewProject = document.querySelectorAll(".work_wrapper");
   })
  })
 
- let projectWrappers = document.querySelectorAll(".project_wrapper")
- projectWrappers.forEach(wrapper =>{
-   let images = wrapper.querySelectorAll(".project_image")
-   images.forEach(image =>{
-    gsap.from(image,{
-      opacity: 0,
-      scrollTrigger:{
-      trigger: image,
-      scroller: wrapper,
-      start: "top 80%"
-      }
-    })
-   })
-   
- })
