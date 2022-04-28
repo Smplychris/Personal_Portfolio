@@ -1,0 +1,228 @@
+@use "./global.scss";
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+
+.dot{
+  opacity: 0;
+  position: fixed;
+  top: 0;
+	z-index: 500;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.invisible{
+  display:none;
+}
+.noise{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/noise.gif");
+  background-repeat: repeat;
+  background-size: 320px;
+  pointer-events: none;
+  opacity: 0.08;
+  z-index: 200;
+}
+.swiper{
+  display: grid;
+  place-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 190;
+  pointer-events: none;
+  background-color: c.$white;
+  transform: translateY(100vh);
+}
+.no-scroll{
+  overflow: hidden;
+}
+// HERO SECTION ++++
+.hero_wrapper{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero_text{
+  font-size: f.$fB;
+  width: 100%;
+  text-align: center;
+}
+.hero_loader{
+  margin-top: 1rem;
+  font-size: f.$fB;
+  width: 100%;
+  text-align: center;
+}
+// HERO SECTION ====
+
+// WORK SECTION ++++
+.work_wrapper{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 12rem;
+}
+.project_name{
+  grid-column: 1/3;
+}
+.project_cover{
+  cursor: pointer;
+  position: relative;
+  grid-column: 3/7;
+  height: 34rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.project_cover.one{
+  background-image: url("../img/Smile\ Binder.jpg");
+}
+.project_cover.two{
+  background-image: url("../img/Smile\ BC.jpg");
+}
+.project_cover.three{
+  background-image: url("../img/Smile\ Book\ 2.jpg");
+}
+.project_wrapper{
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  visibility: hidden;
+  pointer-events:all;
+  background-color: c.$black;
+}
+.project_image{
+  width: 100%;
+  margin-top: 1rem;
+}
+.close_button{
+  cursor: pointer;
+  display: flex;
+  padding: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: c.$white;
+  border-radius: 50%;
+  z-index: 101;
+  transition: background-color 1s ease;
+  svg{
+    fill: c.$black;
+    width: 14px;
+    height: 14px;
+    transition: fill 1s ease;
+  }
+}
+.close_button:hover{
+  background-color: #c61e1e;
+  svg{
+    fill: c.$white;
+  }
+}
+// WORK SECTION ====
+
+// ABOUT SECTION ++++
+.about_wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.about_tittle{
+  grid-column: 1/2;
+}
+.about_paragraph{
+  grid-column: 3/7;
+}
+// ABOUT SECTION ====
+
+// CONTACTS SECTION ++++
+.contacts_wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.contacts_tittle{
+  grid-column: 1/2;
+}
+.contacts_paragraph{
+  grid-column: 3/7;
+}
+.contacts_links_wrapper{
+  margin-top: 2rem;
+  grid-column: 3/7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.link_wrapper{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-block: 0.2rem;
+  margin-right: 2rem;
+}
+.link{
+  position: relative;
+}
+.link_subtext{
+  opacity: 0.6;
+}
+.link_underline{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: c.$black;
+  opacity: 0.6;
+  transform: translateX(-102%);
+}
+// CONTACTS SECTION ====
+
+// CREDITS SECTION ++++
+.credits_wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.credits_tittle{
+  grid-column: 1/2;
+}
+.credit_wrapper{
+  grid-column: 3/7;
+  display: flex;
+  flex-direction: column;
+}
+.credit{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+.credit_type{
+  margin-bottom: 2rem;
+}
+.credit_subtext{
+  opacity: 0.6;
+}
+// CREDITS SECTION ====

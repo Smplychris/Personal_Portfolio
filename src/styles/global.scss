@@ -1,0 +1,45 @@
+@use "./fonts.scss" as f;
+@use "./colors.scss" as c;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color:c.$white;
+  font-family: "Supply";
+  font-size: f.$fB;
+  text-transform: uppercase;
+  color: c.$black;
+}
+section{
+  width: 100%;
+  padding-block: 2rem;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+p{
+  line-height: 1.4;
+}
+.container{
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1{
+  font-size: f.$fH1;
+}
+h2{
+  font-size: f.$fH2;
+}
+h3{
+  font-size: f.$fH3;
+}
+p{
+  font-size: f.$fB;
+}

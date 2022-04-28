@@ -1,0 +1,20 @@
+{
+  "name": "testinteractions",
+  "version": "1.0.0",
+  "description": "TestingInteractions",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Christian Dechkov",
+  "license": "ISC",
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
+    "gsap": "^3.10.4",
+    "imagesloaded": "^5.0.0",
+    "parcel": "^2.5.0",
+    "sass": "^1.50.1",
+    "split-type": "^0.2.5"
+  }
+}
