@@ -3,12 +3,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { Flip } from "gsap/Flip";
 import SplitType from 'split-type';
-import { cursor } from './cursor';
+import { info_bar } from './info_bar';
 import { projects } from './projects';
+import { text } from './text'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger, Flip)
 
-import {loaderOff, loaderOn, jurkane} from "./loader";
+import {loaderOff, loaderOn, jurkane, heroScroll} from "./loader";
 
 var imagesLoaded = require('imagesloaded');
 let images = document.querySelectorAll("img")

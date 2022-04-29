@@ -12,6 +12,10 @@ body{
   text-transform: uppercase;
   color: c.$black;
 }
+::selection{
+  color: c.$white;
+  background: c.$black;
+}
 section{
   width: 100%;
   padding-block: 2rem;
@@ -21,7 +25,7 @@ a{
   color: inherit;
 }
 p{
-  line-height: 1.4;
+  line-height: 1.8;
 }
 .container{
   width: 100%;

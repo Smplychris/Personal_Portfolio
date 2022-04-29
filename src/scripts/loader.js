@@ -4,12 +4,12 @@ import { Flip } from "gsap/Flip";
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(Flip, ScrollTrigger, TextPlugin)
 
-
+let body = document.querySelector("body")
 let jurkane = gsap.to(".hero_text", {
   ease:"none",
   paused:true,
   text: {
-      value:" Hello my name is christian - designer / developer looking for a job",
+      value:" Hello my name is christian a designer / developer looking for a job",
       delimiter: "",
       speed:2
   }
@@ -25,13 +25,59 @@ let loaderOn = gsap.from(".hero_loader", {
       speed:0.4
   }
 });
-let loaderOff = gsap.to (".hero_loader",{
+let loaderOff = gsap.timeline({
+  paused:true,
+  onComplete:()=>{
+    loaderOn.kill()
+    body.classList.remove("no-scroll")
+  }
+}) 
+loaderOff.to(".hero_loader",{
   opacity:0,
-  paused:true
 })
-;
+loaderOff.from(".hero_scroll",{
+  duration:0.8,
+  opacity:0,
+})
+loaderOff.to(".hero_scroll",{
+  duration:0.6,
+  y:100
+},"-=0.9")
 export{
   jurkane,
   loaderOn,
-  loaderOff
+  loaderOff,
+  heroScroll
 }
+
+let heroScroll = ScrollTrigger.create({
+  trigger:".hero_wrapper",
+  start:"bottom 80%",
+  end:"bottom 80%",
+  onEnter:()=>{
+    gsap.to(".hero_scroll",{
+      opacity:0,
+      y:-150
+    })
+    gsap.to(".hero_text",{
+      opacity:0,
+      y:-100
+    })
+    gsap.to(".info_bar",{
+      opacity:1
+    })
+  },
+  onEnterBack:()=>{
+   gsap.to(".hero_scroll",{
+     opacity:1,
+     y:100
+   })
+   gsap.to(".hero_text",{
+     opacity:1,
+     y:0
+   })
+   gsap.to(".info_bar",{
+    opacity:0
+  })
+ }
+})
