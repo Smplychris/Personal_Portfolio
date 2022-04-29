@@ -12,6 +12,7 @@ body{
   text-transform: uppercase;
   color: c.$black;
 }
+
 ::selection{
   color: c.$white;
   background: c.$black;
@@ -20,13 +21,8 @@ section{
   width: 100%;
   padding-block: 2rem;
 }
-a{
-  text-decoration: none;
-  color: inherit;
-}
-p{
-  line-height: 1.8;
-}
+
+
 .container{
   width: 100%;
   max-width: 1440px;
@@ -45,5 +41,18 @@ h3{
   font-size: f.$fH3;
 }
 p{
-  font-size: f.$fB;
+  line-height: 1.8
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (max-width: 480px) {
+ body{
+   font-size: f.$fBm;
+ }
+ .container{
+   padding-left: 0.5rem;
+   padding-right: 0.5rem;
+ }
 }

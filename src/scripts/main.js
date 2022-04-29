@@ -5,7 +5,7 @@ import { Flip } from "gsap/Flip";
 import SplitType from 'split-type';
 import { info_bar } from './info_bar';
 import { projects } from './projects';
-import { text } from './text'
+import { proejcts_hover } from './projects_hover'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger, Flip)
 

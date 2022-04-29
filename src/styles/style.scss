@@ -2,15 +2,6 @@
 @use "./fonts.scss" as f;
 @use "./colors.scss" as c;
 
-.dot{
-  opacity: 0;
-  position: fixed;
-  top: 0;
-	z-index: 500;
-  left: 0;
-  border-radius: 50%;
-  pointer-events: none;
-}
 .invisible{
   display:none;
 }
@@ -73,6 +64,16 @@
 .info_bar_link{
   margin-right: 1rem;
 }
+@media screen and (max-width: 420px){
+  .info_bar_name{
+    display: none;
+  }
+  .info_bar_links{
+    grid-column: 1/7;
+    padding-block: 4px;
+  }
+}
+
 // HERO SECTION ++++
 .hero_wrapper{
   width: 100%;
@@ -83,13 +84,11 @@
   justify-content: center;
 }
 .hero_text{
-  font-size: f.$fB;
   width: 100%;
   text-align: center;
 }
 .hero_loader{
   margin-top: 1rem;
-  font-size: f.$fB;
   width: 100%;
   text-align: center;
 }
@@ -191,6 +190,14 @@
     fill: c.$white;
   }
 }
+@media screen and (max-width: 700px) {
+  .project_tittle{
+    grid-column: 1/7;
+  }
+  .project_cover{
+    grid-column: 1/7;
+  }
+ }
 // WORK SECTION ====
 
 // ABOUT SECTION ++++

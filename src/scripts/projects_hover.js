@@ -21,7 +21,7 @@ projectCover.forEach(cover=>{
     text:{
       value:"[VIEW PROJECT]"
     }
-  })
+  },"-=0.2")
   cover.addEventListener('mouseover',()=>{
     popupAppear.play()
   })

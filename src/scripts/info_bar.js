@@ -25,7 +25,7 @@ let phoneLink = document.querySelector(".info_bar_link.phone")
 let phoneLinkHover = gsap.to(phoneLink,{
   paused:true,
   text:{
-    value:"[0896 510 702]",
+    value:"[+359 896 510 702]",
     delimiter:""
   }
 })
@@ -79,4 +79,26 @@ githubLink.addEventListener("mouseover",()=>{
 })
 githubLink.addEventListener("mouseleave",()=>{
   githubLinkHover.reverse()
+})
+
+let infoBarAppear = gsap.to(".info_bar",{
+  paused:true,
+  yPercent:-101,
+})
+ScrollTrigger.create({
+  trigger:".contacts_wrapper",
+  start:"top 80%",
+  end:"bottom 20%",
+  onEnter:()=>{
+    infoBarAppear.play()
+  },
+  onLeave:()=>{
+    infoBarAppear.reverse()
+  },
+  onEnterBack:()=>{
+    infoBarAppear.play()
+  },
+  onLeaveBack:()=>{
+    infoBarAppear.reverse()
+  }
 })
