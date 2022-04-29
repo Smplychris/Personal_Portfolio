@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { TextPlugin } from "gsap/TextPlugin";
 import { Flip } from "gsap/Flip";
-import SplitType from 'split-type'
 
 gsap.registerPlugin(TextPlugin, ScrollTrigger, Flip)
 
@@ -83,7 +82,7 @@ githubLink.addEventListener("mouseleave",()=>{
 
 let infoBarAppear = gsap.to(".info_bar",{
   paused:true,
-  yPercent:-101,
+  yPercent:101,
 })
 ScrollTrigger.create({
   trigger:".contacts_wrapper",

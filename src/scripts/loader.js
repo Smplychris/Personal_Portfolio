@@ -43,12 +43,6 @@ loaderOff.to(".hero_scroll",{
   duration:0.6,
   y:100
 },"-=0.9")
-export{
-  jurkane,
-  loaderOn,
-  loaderOff,
-  heroScroll
-}
 
 let heroScroll = ScrollTrigger.create({
   trigger:".hero_wrapper",
@@ -81,3 +75,11 @@ let heroScroll = ScrollTrigger.create({
   })
  }
 })
+
+var imagesLoaded = require('imagesloaded');
+let images = document.querySelectorAll("img")
+ imagesLoaded(images, function(){
+   loaderOff.play(),
+   loaderOn.kill(),
+   jurkane.play()
+ })
