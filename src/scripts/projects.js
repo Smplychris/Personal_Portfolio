@@ -25,7 +25,7 @@ let viewProject = document.querySelectorAll(".work_wrapper");
      ease:"none",
      duration:1,
     text:{
-      value:" CHRISTIAN_DECHKOV_2022",
+      value:"CHRISTIAN_DECHKOV_2022",
       delimiter: "",
     }
   })
