@@ -16,7 +16,7 @@
   background-size: 320px;
   pointer-events: none;
   opacity: 0.06;
-  display: none;
+  //display: none;
   z-index: 1;
 }
 .swiper{
@@ -110,12 +110,16 @@
   margin-bottom: 12rem;
 }
 .project_tittle{
-  grid-column: 1/2;
+  padding-top: 2rem;
+  margin-left: 1rem;
+  grid-column: 5/7;
+  display: flex;
+  border-top: 1px solid c.$white;
 }
 .project_cover{
   cursor: pointer;
   position: relative;
-  grid-column: 3/7;
+  grid-column: 1/5;
   height: 34rem;
   display: flex;
   flex-direction: column;
@@ -134,7 +138,7 @@
   background-image: url("../img/Smile\ Binder.jpg");
 }
 .project_cover.two{
-  background-image: url("../img/Smile\ BC.jpg");
+  background-image: url("../img/Heroweb.jpg");
 }
 .project_cover.three{
   background-image: url("../img/Smile\ Book\ 2.jpg");
@@ -207,6 +211,9 @@
 @media screen and (max-width: 700px) {
   .project_tittle{
     grid-column: 1/7;
+    padding-top: 2rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
   }
   .project_cover{
     grid-column: 1/7;
