@@ -9,7 +9,7 @@ let jurkane = gsap.to(".hero_text", {
   ease:"none",
   paused:true,
   text: {
-      value:" Hello my name is christian a designer / developer looking for a job",
+      value:" Hello my name is christian : designer / developer looking for a job",
       delimiter: "",
       speed:2
   }

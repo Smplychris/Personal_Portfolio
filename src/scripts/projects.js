@@ -19,13 +19,18 @@ let viewProject = document.querySelectorAll(".work_wrapper");
      }
    })
    openProject.to(swiper,{
-     y:"0vh"
+     width:"100%",
+     ease:"power4.out",
+     duration:1,
    })
+   openProject.to(swiperText,{
+    opacity:1
+  })
    openProject.to(swiperText,{
      ease:"none",
      duration:1,
     text:{
-      value:"CHRISTIAN_DECHKOV_2022",
+      value:"SMPLYCREATIVE.DESIGN",
       delimiter: "",
     }
   })
@@ -33,7 +38,9 @@ let viewProject = document.querySelectorAll(".work_wrapper");
      autoAlpha:1
    })
       openProject.to(swiper,{
-    y:"100vh"
+    yPercent:"100",
+    duration:1,
+    ease:"power4.out"
   })
    openProject.from(projectClose,{
      yPercent:-101,
